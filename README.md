@@ -26,7 +26,7 @@ Contoh menu:
 - Telur
 - Roti Bakar
 
-## 2. Menu Minuman
+### 2. Menu Minuman
 
 Menampilkan daftar minuman beserta harga. Pengguna dapat memilih satu atau beberapa jenis minuman dan menentukan jumlah pesanannya.
 
