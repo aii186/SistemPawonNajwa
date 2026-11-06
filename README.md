@@ -10,7 +10,6 @@ Sistem Pawon Najwa merupakan aplikasi sederhana berbasis pemrograman berorientas
 - Membuat sistem pemesanan makanan dan minuman yang sederhana.
 - Menghitung total harga pesanan secara otomatis.
 - Menyediakan pilihan metode pembayaran.
-- Melatih kerja sama tim dalam merancang dan membangun sebuah aplikasi.
 
 ## Fitur Utama
 
