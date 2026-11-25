@@ -16,7 +16,7 @@ public class EWalletAccount implements FinancialAccount {
         if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
             this.phoneNumber = "";
         } else {
-            this.phoneNumber = phoneNumber;
+            this.phoneNumber = phoneNumber.trim();
         }
 
         this.balance = balance < 0 ? 0 : balance;
@@ -24,7 +24,7 @@ public class EWalletAccount implements FinancialAccount {
 
     @Override
     public boolean charge(double amount) {
-        if (phoneNumber.length() == 10 && amount > 0 && balance >= amount) {
+        if (phoneNumber.length() >= 10 && amount > 0 && balance >= amount) {
             this.balance -= amount;
             return true;
         } else {

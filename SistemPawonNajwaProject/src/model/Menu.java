@@ -12,37 +12,38 @@ public class Menu {
     protected String nama;
     protected int harga;
     protected int stok;
+    private int databaseId;
 
     public Menu() {
-    }
-
-    public Menu(String nama, int harga) {
-        this(nama, harga, 20);
     }
 
     public Menu(String nama, int harga, int stok) {
         this.nama = nama;
         this.harga = harga;
-        this.stok = stok;
+        this.stok = stok < 0 ? 0 : stok;
     }
 
     public void setNama(String nama) { this.nama = nama; }
     public void setHarga(int harga) { this.harga = harga; }
-    public void setStok(int stok) { this.stok = Math.max(0, stok); }
-
-    public void tambahStok(int tambahan) {
-        this.stok += tambahan;
-    }
-
-    public boolean kurangiStok(int jumlah) {
-        if (jumlah > 0 && this.stok >= jumlah) {
-            this.stok -= jumlah;
-            return true;
-        }
-        return false;
-    }
-
     public String getNama() { return this.nama; }
     public int getHarga() { return this.harga; }
+
     public int getStok() { return this.stok; }
+    public int getDatabaseId() { return databaseId; }
+    public void setDatabaseId(int databaseId) { this.databaseId = databaseId; }
+
+    public void setStok(int stok) { this.stok = stok; }
+    
+    public void tambahStok(int jumlah) {
+        if (jumlah > 0) {
+            this.stok += jumlah;
+        }
+    }
+
+    public void kurangiStok(int jumlah) {
+        this.stok -= jumlah;
+        if (this.stok < 0) {
+            this.stok = 0;
+        }
+    }
 }

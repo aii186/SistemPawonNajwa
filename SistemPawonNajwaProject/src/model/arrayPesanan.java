@@ -28,12 +28,21 @@ public class arrayPesanan {
         return true;
     }
 
-    public int getJumlahDipesanUntukMenu(Menu menu) {
+    public int getJumlahMenu(Menu menu) {
         for (int i = 0; i < this.jumlahItem; i++) {
-            if (this.daftar[i].getMenu() == menu) return this.daftar[i].getJumlah();
+            if (this.daftar[i].getMenu() == menu) {
+                return this.daftar[i].getJumlah();
+            }
         }
         return 0;
     }
+    
+    public int getJumlahDipesanUntukMenu(Menu menu) {
+        for (int i = 0; i < jumlahItem; i++) {
+            if (daftar[i].getMenu() == menu) return daftar[i].getJumlah();
+        }
+            return 0;
+        }
 
     public int getJumlahItem() { return this.jumlahItem; }
     public ItemPesanan getItem(int index) { return this.daftar[index]; }

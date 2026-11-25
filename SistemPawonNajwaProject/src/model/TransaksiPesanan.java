@@ -19,7 +19,8 @@ public class TransaksiPesanan {
     private int total;
     private String metodeBayar;
     private String waktu;
-    private String status;
+    private String status = "Baru";
+    private java.util.List<ItemPesanan> items = new java.util.ArrayList<>();
 
     public TransaksiPesanan(String idTransaksi, String namaPelanggan, String nomorMeja,
                             String ringkasanItem, int total, String metodeBayar) {
@@ -42,6 +43,9 @@ public class TransaksiPesanan {
     public String getWaktu() { return waktu; }
     public String getStatus() { return status; }
 
+    public java.util.List<ItemPesanan> getItems() { return items; }
+    public void setItems(java.util.List<ItemPesanan> items) { this.items = items; }
+    
     public void setStatus(String status) {
         this.status = status;
     }

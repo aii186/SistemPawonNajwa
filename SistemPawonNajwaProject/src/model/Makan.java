@@ -9,10 +9,6 @@ package model;
  * @author USER
  */
 public class Makan extends Menu {
-    public Makan(String nama, int harga) {
-        super(nama, harga);
-    }
-
     public Makan(String nama, int harga, int stok) {
         super(nama, harga, stok);
     }
